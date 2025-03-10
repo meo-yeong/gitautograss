@@ -1,0 +1,2 @@
+# gitautograss
+auto check
