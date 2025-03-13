@@ -2,8 +2,8 @@ name: autograss
 
 on:
   schedule:
-    - cron: '03 15 * * *'  # will be automatically executed everyday 23:50 (UTC)
-  workflow_dispatch:  # allow manual execution
+    - cron: '03 15 * * *'  
+  workflow_dispatch:  
 
 jobs:
   autograss:
@@ -27,5 +27,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # must add github token name AUTO_JANDI into github actions secret variable
-          branch : main # select branch to push
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          branch : main
