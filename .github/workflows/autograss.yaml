@@ -27,5 +27,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.autograss }} # must add github token name AUTO_JANDI into github actions secret variable
+          github_token: ${{ secrets.AUTOGRASS }} # must add github token name AUTO_JANDI into github actions secret variable
           branch : main # select branch to push
