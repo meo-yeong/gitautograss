@@ -14,16 +14,16 @@ jobs:
 
       - name: Update file with date
         run: |
-          if [ ! -f $GITHUB_WORKSPACE/auto_jandi_log.txt ]; then
-            touch $GITHUB_WORKSPACE/auto_jandi_log.txt
+          if [ ! -f $GITHUB_WORKSPACE/autograss_log.txt ]; then
+            touch $GITHUB_WORKSPACE/autograss_log.txt
           fi
-          echo "grass automatically Updated on $(date +'%Y-%m-%d')" >> $GITHUB_WORKSPACE/auto_jandi_log.txt
+          echo "grass Updated on $(date +'%Y-%m-%d')" >> $GITHUB_WORKSPACE/autograss_log.txt
       - name: Commit changes
         run: |
           git config --global user.name 'meo-yeong'
           git config --global user.email 'iliad1613@gmail.com'
-          git add $GITHUB_WORKSPACE/auto_jandi_log.txt
-          git commit -m "Jandi automatically Updated on $(date +'%Y-%m-%d')"
+          git add $GITHUB_WORKSPACE/autograss_log.txt
+          git commit -m "grass Updated on $(date +'%Y-%m-%d')"
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
