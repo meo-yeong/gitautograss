@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          github_token: ${{ secrets.autograss }}
 
       - name: Update file with date
         run: |
@@ -27,5 +29,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.gitautograss }} # must add github token name AUTO_JANDI into github actions secret variable
+          github_token: ${{ secrets.autograss }} # must add github token name AUTO_JANDI into github actions secret variable
           branch : main # select branch to push
