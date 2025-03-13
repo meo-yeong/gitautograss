@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # allow manual execution
 
 jobs:
-  auto_jandi:
+  autograss:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
